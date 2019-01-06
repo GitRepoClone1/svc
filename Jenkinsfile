@@ -20,7 +20,7 @@ podTemplate(
     node('mypod') {
         stage ('Deploy') {
             container ('base') {
-                echo "Workspace dir is ${pwd()}"
+                sh "echo \`ls\`"
                 sh "./install.sh"
             }
         }
