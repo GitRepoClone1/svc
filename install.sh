@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-until kubectl get pods; do sleep 1; done
 
 kubectl --namespace kube-system create sa tiller
 # create a cluster role binding for tiller
