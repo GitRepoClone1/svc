@@ -19,8 +19,11 @@ podTemplate(
 {
     node('mypod') {
         stage ('Deploy') {
-            container ('base') {
-                steps {
+            steps {
+                container ('base') {
+                    sh "git checkout master"
+                    sh "ls -la"
+                    sh "./install.sh"
                 }
             }
         }
