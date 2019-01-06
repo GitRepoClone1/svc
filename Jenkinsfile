@@ -20,8 +20,8 @@ podTemplate(
     node('mypod') {
         stage ('Deploy') {
             container ('base') {
-                sh "ls -la"
-                sh "./install.sh"
+                steps {
+                }
             }
         }
     }
