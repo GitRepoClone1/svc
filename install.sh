@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+gcloud container clusters get-credentials jenkins --zone us-east1-b --project devops-12232018
 
 kubectl --namespace kube-system create sa tiller
 # create a cluster role binding for tiller
