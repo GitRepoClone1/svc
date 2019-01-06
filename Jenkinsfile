@@ -15,12 +15,4 @@ podTemplate(
             mountPath: '/var/run/docker.sock'
         )
     ]
-) {
-    node('mypod') {
-        stage ('Deploy') {
-            container ('base') {
-                sh "sh "./install.sh""
-            }
-        }
-    }
-}
+)
