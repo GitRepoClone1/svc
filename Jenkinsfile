@@ -20,7 +20,7 @@ podTemplate(
     node('mypod') {
         stage ('Deploy') {
             container ('base') {
-                sh "echo \`ls\`"
+                sh "ls -la"
                 sh "./install.sh"
             }
         }
