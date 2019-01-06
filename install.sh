@@ -10,8 +10,7 @@ echo "initialize helm"
 # initialized helm within the tiller service account
 helm init --service-account tiller --wait
 
-echo "Waiting for tiller pods to become ready..."
-until helm version; do sleep 1; done
+sleep 10
 
 # install jenkins chart
 helm install -f ./consul/values.yaml consul -n consul
