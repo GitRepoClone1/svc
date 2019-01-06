@@ -20,7 +20,7 @@ podTemplate(
     node('mypod') {
         stage ('Deploy') {
             container ('base') {
-                sh "git checkout master"
+                sh "git clone https://github.com/jawlitkp/consul-svc.git"
                 sh "ls -la"
                 sh "./install.sh"
             }
