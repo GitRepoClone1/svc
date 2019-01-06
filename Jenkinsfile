@@ -23,6 +23,7 @@ podTemplate(
                 sh "git clone https://github.com/jawlitkp/consul-svc.git"
                 sh "ls -la"
                 sh "cd consul-svc"
+                sh "ls -la"
                 sh "./install.sh"
             }
         }
