@@ -2,6 +2,7 @@
 
 gcloud auth application-default login \
       --client-id-file=devops.json
+      --quiet
       
 gcloud container clusters get-credentials jenkins --zone us-east1-b --project devops-12232018
 
