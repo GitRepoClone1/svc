@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-gcloud auth application-default login \
-      --client-id-file=devops.json
-      --quiet
-      
+gcloud auth activate-service-account --key-file devops.json
+
 gcloud container clusters get-credentials jenkins --zone us-east1-b --project devops-12232018
 
 kubectl --namespace kube-system create sa tiller
