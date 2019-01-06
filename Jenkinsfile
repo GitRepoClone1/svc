@@ -19,7 +19,11 @@ podTemplate(
     node('mypod') {
         stage ('Deploy') {
             container ('base') {
-                sh "sh "./install.sh""
+                sh "kubectl --namespace kube-system create sa tiller"
+                sh "helm init --client-only --skip-refresh"               
+                sh "helm init --client-only --skip-refresh"
+                sh "kubectl get pods"
+                sh "helm install --name my-release stable/consul"
             }
         }
     }
