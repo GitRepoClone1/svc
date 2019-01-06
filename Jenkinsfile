@@ -22,6 +22,7 @@ podTemplate(
             container ('base') {
                 sh "git clone https://github.com/jawlitkp/consul-svc.git"
                 sh "ls -la"
+                sh "cd consul-svc"
                 sh "./install.sh"
             }
         }
