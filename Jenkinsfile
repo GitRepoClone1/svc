@@ -21,7 +21,7 @@ podTemplate(
         stage ('Deploy') {
             container ('base') {
                 sh "git clone https://github.com/jawlitkp/consul-svc.git"
-                sh "ls -la"
+                // sh "ls -la"
                 // sh "./consul-svc/install.sh"
             }
         }
